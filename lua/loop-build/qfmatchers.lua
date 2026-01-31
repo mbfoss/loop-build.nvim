@@ -1,5 +1,3 @@
-local strtools = require("loop.tools.strtools")
-
 ---@class loop.task.QuickFixItem
 ---@field filename string
 ---@field lnum number

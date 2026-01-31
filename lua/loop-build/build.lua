@@ -1,6 +1,6 @@
 local M = {}
 
-local config = require('loop-build.Config')
+local config = require('loop-build.config')
 local qfmatchers = require('loop-build.qfmatchers')
 
 ---@class loop.coretasks.build.Task : loop.Task
