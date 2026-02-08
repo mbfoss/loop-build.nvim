@@ -89,10 +89,7 @@ function M.start_task(ext_data, task, page_manager, on_exit)
         end,
     }
 
-    local pagegroup = page_manager.get_page_group(task.type)
-    if not pagegroup then
-        pagegroup = page_manager.add_page_group(task.type, task.name)
-    end
+    local pagegroup = page_manager.add_page_group(task.name)
     if not pagegroup then
         return nil, "page manager expired"
     end
