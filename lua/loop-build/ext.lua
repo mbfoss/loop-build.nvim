@@ -7,9 +7,9 @@ local function make_tasktype_provider(ext_data)
         get_task_schema = function()
             return require("loop-build.schema")
         end,
-        start_one_task = function(task, page_manager, on_exit)
+        start_one_task = function(task, page_group, on_exit)
             ---@cast task loop.coretasks.build.Task
-            return build.start_task(ext_data, task, page_manager, on_exit)
+            return build.start_task(ext_data, task, page_group, on_exit)
         end
     }
 end
