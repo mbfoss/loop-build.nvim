@@ -100,7 +100,7 @@ function M.start_task(ext_data, task, page_group, on_exit)
     })
 
     if not page_data then
-        return nil, "failed to create page"
+        return nil, err_msg
     end
 
     --add_term_page(task.name, start_args, true)
