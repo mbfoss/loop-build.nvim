@@ -1,5 +1,4 @@
 ---@class loop-build.Config
----@field quickfix_matchers table<string,function>?
 
 local M = {}
 

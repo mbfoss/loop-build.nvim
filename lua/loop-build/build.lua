@@ -3,6 +3,9 @@ local M = {}
 local config = require('loop-build.config')
 local qfmatchers = require('loop-build.qfmatchers')
 
+---@type table<string, fun(line:string,context:table):loop.task.QuickFixItem?>
+local _user_quickfix_matchers = {}
+
 ---@class loop.coretasks.build.Task : loop.Task
 ---@field command string[]|string|nil
 ---@field cwd string?
@@ -17,7 +20,7 @@ local function _make_output_parser(task)
         return nil
     end
 
-    local qf_parser = config.current.quickfix_matchers[task.quickfix_matcher]
+    local qf_parser = _user_quickfix_matchers[task.quickfix_matcher]
     if not qf_parser then
         qf_parser = qfmatchers[task.quickfix_matcher]
         if not qf_parser then
@@ -54,6 +57,12 @@ local function _make_output_parser(task)
             vim.fn.setqflist(issues, "a")
         end
     end
+end
+
+---@param name string
+---@param matcher fun(line:string,context:table):loop.task.QuickFixItem?
+function M.register_qfmatcher(name, matcher)
+    _user_quickfix_matchers[name] = matcher
 end
 
 ---@param ext_data loop.ExtensionData

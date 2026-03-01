@@ -10,6 +10,7 @@ return {
 			cwd = "${wsdir}",
 			quickfix_matcher = "",
 			save_buffers = true,
+			if_running = "restart",
 		},
 	},
 	----------------------------------------------------------------------------
@@ -24,6 +25,8 @@ return {
 			cwd = "${wsdir}",
 			quickfix_matcher = "gcc",
 			save_buffers = true,
+			if_running = "restart",
+
 		},
 	},
 	{
@@ -35,6 +38,7 @@ return {
 			cwd = "${filedir}",
 			quickfix_matcher = "gcc",
 			save_buffers = true,
+			if_running = "restart",
 		},
 	},
 
@@ -50,6 +54,7 @@ return {
 			cwd = "${wsdir}",
 			quickfix_matcher = "cargo",
 			save_buffers = true,
+			if_running = "restart",
 		},
 	},
 	{
@@ -61,6 +66,7 @@ return {
 			cwd = "${wsdir}",
 			quickfix_matcher = "cargo",
 			save_buffers = true,
+			if_running = "restart",
 		},
 	},
 	{
@@ -72,6 +78,7 @@ return {
 			cwd = "${wsdir}",
 			quickfix_matcher = "cargo",
 			save_buffers = true,
+			if_running = "restart",
 		},
 	},
 
@@ -87,6 +94,7 @@ return {
 			cwd = "${wsdir}",
 			quickfix_matcher = "go",
 			save_buffers = true,
+			if_running = "restart",
 		},
 	},
 	{
@@ -98,6 +106,7 @@ return {
 			cwd = "${filedir}",
 			quickfix_matcher = "go",
 			save_buffers = true,
+			if_running = "restart",
 		},
 	},
 
@@ -113,6 +122,7 @@ return {
 			cwd = "${filedir}",
 			quickfix_matcher = "linter",
 			save_buffers = true,
+			if_running = "restart",
 		},
 	},
 	{
@@ -124,6 +134,7 @@ return {
 			cwd = "${wsdir}",
 			quickfix_matcher = "tsc",
 			save_buffers = true,
+			if_running = "restart",
 		},
 	},
 	{
@@ -135,6 +146,7 @@ return {
 			cwd = "${filedir}",
 			quickfix_matcher = "linter",
 			save_buffers = true,
+			if_running = "restart",
 		},
 	},
 }

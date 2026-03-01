@@ -3,6 +3,7 @@ local M = {}
 
 -- Dependencies
 local config = require("loop-build.config")
+local build = require("loop-build.build")
 
 -----------------------------------------------------------
 -- Defaults
@@ -10,7 +11,6 @@ local config = require("loop-build.config")
 
 ---@type loop-build.Config
 local DEFAULT_CONFIG = {
-    quickfix_matchers = {}
 }
 
 -----------------------------------------------------------
@@ -50,6 +50,12 @@ function M.init()
     if not setup_done then
         config.current = DEFAULT_CONFIG
     end
+end
+
+---@param name string
+---@param matcher fun(line:string,context:table):loop.task.QuickFixItem?
+function M.register_quickfix_matcher(name, matcher)
+    build.register_qfmatcher(name, matcher)
 end
 
 return M
