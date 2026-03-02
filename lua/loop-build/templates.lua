@@ -2,7 +2,7 @@
 return {
 	--- empty generic task
 	{
-		name = "Build task",
+		name = "Build",
 		task = {
 			name = "Build",
 			type = "build",
