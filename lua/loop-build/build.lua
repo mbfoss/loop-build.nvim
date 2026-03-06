@@ -1,6 +1,5 @@
 local M = {}
 
-local config = require('loop-build.config')
 local qfmatchers = require('loop-build.qfmatchers')
 
 ---@type table<string, fun(line:string,context:table):loop.task.QuickFixItem?>
