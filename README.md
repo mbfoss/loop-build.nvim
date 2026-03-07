@@ -1,3 +1,14 @@
+> [!WARNING]
+> 🚧 **Work in Progress**
+>
+> This plugin is currently under active development.
+>
+> - APIs and configuration may change
+> - Breaking changes can occur without notice
+>
+> Use with caution until a stable release is announced.
+> Issues, suggestions, and contributions are welcome while the project evolves.
+
 # loop-build.nvim
 
 Build task provider for [loop.nvim](https://github.com/mbfoss/loop.nvim). Adds a **build** task type and templates for common build and lint commands, with optional quickfix parsing.
@@ -26,7 +37,7 @@ Build task provider for [loop.nvim](https://github.com/mbfoss/loop.nvim). Adds a
 ## Quick Start
 
 1. Install loop.nvim and loop-build.nvim.
-2. Open a loop workspace (`:Loop workspace open`).
+2. Create a loop workspace (`:Loop workspace create`).
 3. Add a build task: `:Loop task configure` and add a task with `"type": "build"`, or use the **Build** templates when editing `tasks.json`.
 4. Run it: `:Loop task run` (or `:Loop task run Build`).
 
